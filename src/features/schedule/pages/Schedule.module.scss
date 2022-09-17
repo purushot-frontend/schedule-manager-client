@@ -1,0 +1,22 @@
+.add-shift-modal-id {
+  color: black;
+}
+
+.add-schedule-modal-id {
+  @extend .add-shift-modal-id;
+}
+
+.select-id {
+  box-sizing: initial;
+}
+
+.select-day-id {
+  @extend .select-id;
+}
+
+.select-start-time-id {
+  @extend .select-id;
+}
+.select-end-time-id {
+  @extend .select-id;
+}

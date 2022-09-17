@@ -1,0 +1,12 @@
+.dynamicWidth {
+  max-width: 320px;
+  width: 100%;
+  position: fixed;
+  top: 110px;
+  z-index: 1;
+}
+
+.dynamicWidth--alt {
+  @extend .dynamicWidth;
+  max-width: 50px;
+}

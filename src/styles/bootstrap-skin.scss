@@ -1,0 +1,227 @@
+// This is where you customize/override default bootstrap
+// Default variable overrides
+//$body-bg: #000;
+//$body-color: #111;
+$warning: #e5ae07;
+$input-bg-v1: rgba(255, 255, 255, 0.6);
+$input-shadow: rgba(229, 174, 7, 0.6);
+$card-bg-default: rgba(0, 0, 0, 0.8);
+$body-color: white;
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code and overwrites here
+$color-attention: $warning;
+@media (max-width: 614px) {
+  body {
+    background-color: red;
+  }
+  .px-1,
+  .px-2,
+  .px-3,
+  .px-4,
+  .px-5 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .py-1,
+  .py-2,
+  .py-3,
+  .py-4,
+  .py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .mx-1,
+  .mx-2,
+  .mx-3,
+  .mx-4,
+  .mx-5 {
+    margin-right: 2rem !important;
+    margin-left: 2rem !important;
+  }
+
+  .my-1,
+  .my-2,
+  .my-3,
+  .my-4,
+  .my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+.form-control:focus {
+  background-color: $gray-800;
+}
+
+.table-responsive {
+  width: 100%;
+}
+
+body {
+
+  font-family: "Verdana", sans-serif;
+  background: #343a40;
+}
+
+a {
+  color: $color-attention;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $white;
+  }
+}
+
+.anchor--inverse {
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    color: $color-attention;
+
+    text-decoration: underline;
+  }
+}
+
+.sched-select,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background-color: $gray-800;
+  border-radius: 5px;
+  border: none;
+  color: $white;
+
+  &:focus {
+    border-color: $color-attention;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $input-shadow;
+  }
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-attention;
+    opacity: 1; /* Firefox */
+  }
+}
+
+.sched-btn-light {
+  border-color: $gray-800;
+  color: black;
+  &:hover {
+    background-color: $gray-900;
+    border-color: $gray-200;
+    color: $white;
+  }
+}
+
+.sched-navbar {
+  color: $gray-800;
+  padding: 15px 0px;
+  font-size: 0.875rem;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  .container-fluid {
+    flex-wrap: wrap;
+    justify-content: end;
+    .navbar-brand {
+      flex-grow: 1;
+      text-align: left;
+      padding-left: 5%;
+      .img-logo {
+        max-width: 152px;
+        width: 100%;
+      }
+    }
+
+    .navbar-collapse {
+      padding-right: 10%;
+      .navbar-nav {
+        width: 100%;
+        justify-content: space-evenly;
+        font-weight: bold;
+        li {
+          a:hover {
+            color: $color-attention;
+            text-decoration: underline;
+          }
+          a {
+            color: inherit;
+          }
+          a.btn:hover {
+            text-decoration: none !important;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sched-sidebar {
+  background-color: rgba(121, 121, 121, 0.95);
+
+  padding: 0 0 0 0%;
+  .sidebar-toggle {
+    width: 100%;
+    text-align: right;
+    margin-top: 55px;
+  }
+  > ul {
+    .nav-item {
+      font-weight: bold;
+      width: 100%;
+      .nav-link {
+        color: $color-attention;
+        :hover {
+          color: $gray-800;
+          text-decoration: underline;
+        }
+      }
+      > a {
+        font-weight: bold;
+      }
+    }
+    > li {
+      .nav-link {
+        color: $color-attention;
+        :hover {
+          color: $gray-800;
+          text-decoration: underline;
+        }
+      }
+      > ul {
+        > li {
+          > a {
+            color: $white !important;
+            :hover {
+              color: $gray-800 !important;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sched-footer {
+  background-color: $card-bg-default;
+}
+
+.sched-table {
+  color: white;
+  thead {
+    border-bottom: 1px dotted white;
+  }
+  td {
+    border: 1px solid gray;
+    padding: 10px;
+  }
+}

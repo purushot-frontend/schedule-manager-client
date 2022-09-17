@@ -1,0 +1,39 @@
+//sched.scss
+
+.sched-container {
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.sched-nowrap {
+  flex-wrap: nowrap;
+}
+
+.sched-container-spinner {
+  position: fixed;
+  top: 50%;
+  /* left: 50%; */
+  width: 100%;
+  text-align: center;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.each-slide span {
+  padding: 2px 10px;
+  font-size: 20px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: inline-block;
+  position: absolute;
+  background: white;
+  color: #00abff;
+
+  border: 1 px solid #161616;
+}
